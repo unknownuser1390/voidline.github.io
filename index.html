@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VOIDLINE — Entity Containment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game" aria-label="VOIDLINE first-person arcade game"></canvas>
+
+    <section id="hud" class="hidden">
+      <div class="hud-top">
+        <div class="brand"><span class="brand-mark">V</span><div><strong>VOIDLINE</strong><small>CONTAINMENT DIVISION</small></div></div>
+        <div class="wave-box"><small>SECTOR</small><strong id="wave">01</strong></div>
+        <div class="objective"><small>OBJECTIVE</small><strong id="objective">CLEAR THE SECTOR</strong></div>
+      </div>
+
+      <div class="hud-bottom">
+        <div class="stat health-stat"><small>SUIT INTEGRITY</small><div class="meter"><i id="health-fill"></i></div><strong id="health">100</strong></div>
+        <div class="center-hint" id="hint">WASD MOVE · MOUSE AIM · CLICK FIRE · R RELOAD</div>
+        <div class="stat ammo-stat"><small>ENERGY CELLS</small><strong><span id="ammo">12</span><em>/ 12</em></strong></div>
+      </div>
+      <div id="crosshair"><i></i><b></b></div>
+      <div id="hit-marker"></div>
+      <div id="damage-flash"></div>
+      <div id="toast"></div>
+      <canvas id="minimap" width="150" height="150"></canvas>
+    </section>
+
+    <section id="overlay" class="overlay">
+      <div class="menu-panel">
+        <div class="eyebrow"><span></span> DEEP-SPACE TRAINING SIMULATION</div>
+        <h1>VOID<span>LINE</span></h1>
+        <p class="subtitle">ENTITY CONTAINMENT PROTOCOL</p>
+        <p class="intro">Something slipped through the rift. Clear each sector, stay mobile, and don't let the entities surround you.</p>
+        <div class="menu-stats">
+          <div><small>THREAT LEVEL</small><strong>INCREASING</strong></div>
+          <div><small>MISSION TYPE</small><strong>ARENA SURVIVAL</strong></div>
+          <div><small>LOADOUT</small><strong>PULSE CASTER</strong></div>
+        </div>
+        <button id="start-btn">INITIALIZE SIMULATION <span>→</span></button>
+        <div class="controls">
+          <span><kbd>W A S D</kbd> MOVE</span><span><kbd>MOUSE</kbd> AIM</span><span><kbd>CLICK</kbd> FIRE</span>
+          <span><kbd>R</kbd> RELOAD</span><span><kbd>SHIFT</kbd> SPRINT</span><span><kbd>ESC</kbd> PAUSE</span>
+        </div>
+        <p class="footnote">ARCADE SIMULATION · NO REAL-WORLD WEAPONS</p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
